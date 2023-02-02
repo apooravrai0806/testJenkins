@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-02-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+    <div>
+        <lightning-button-menu alternative-text="List View" onselect={handleMenuSelect}>
+            <lightning-menu-item label="Last 7 Days" value="last7Days"> </lightning-menu-item>
+            <lightning-menu-item label="Last 1 Year" value="last365Days"> </lightning-menu-item>
+            <lightning-menu-item label="Last 2 Year" value="last730Days">
+            </lightning-menu-item>
+        </lightning-button-menu>
+    </div>
+    <div>
+        <lightning-button name="RenderAsPdf" label="Export" onclick={handleOnClick}></lightning-button>
+    </div>
+        <lightning-datatable
+                key-field="Id"
+                data={data}
+                columns={columns}>
+        </lightning-datatable>
+</lightning-card>
+</template>
